@@ -164,7 +164,8 @@ class BuildWayland(Command):
         pass
 
     def run(self):
-        log.info('generating Wayland protocol modules')
+        # NameError: name 'log' is not defined on that line:
+        # log.info('generating Wayland protocol modules')
         base = 'plover/oslayer/wayland'
         defs = glob.glob(base + '/*.xml') + ['/usr/share/wayland/wayland.xml']
         cmd = (
